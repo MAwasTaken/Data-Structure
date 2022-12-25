@@ -25,8 +25,8 @@ class NewStack<T> {
 
 class Expression {
 
-    private leftBrackets:string[] = ['(', '<', '[', '{']
-    private rightBrackets:string[] = [')', '>', ']', '}']
+    private leftBrackets: string[] = ['(', '<', '[', '{']
+    private rightBrackets: string[] = [')', '>', ']', '}']
 
     public isBalenced(input: string): boolean {
         let stack = new NewStack()
@@ -40,7 +40,7 @@ class Expression {
                 if (stack.isEmpty())
                     return false
 
-                let top:string = String(stack.pop())
+                let top: string = String(stack.pop())
 
                 if (this.bracketsMatch(input.charAt(i), top))
                     return false

@@ -22,9 +22,10 @@ class LinkedList<T>{
 
     if (this.isEmpty())
       this.head = this.tail = node
-    else
+    else {
       this.tail.next = node
-    this.tail = node
+      this.tail = node
+    }
 
     this.size++
   }
@@ -120,14 +121,14 @@ class LinkedList<T>{
     this.head = previous
   }
 
-  public getKthFromTheEnd(k: number): T{
+  public getKthFromTheEnd(k: number): T {
     let a = this.head
     let b = this.head
 
     let i: number
     for (i = 0; i < k - 1; i++) {
       b = b.next
-      if(b == null)
+      if (b == null)
         throw new Error('Illegal Argument Exception')
     }
 
