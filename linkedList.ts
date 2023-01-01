@@ -23,7 +23,7 @@ class LinkedList<T>{
     if (this.isEmpty())
       this.head = this.tail = node
     else {
-      this.tail.next = node
+      this.tail!.next = node
       this.tail = node
     }
 
@@ -36,7 +36,7 @@ class LinkedList<T>{
     if (this.isEmpty())
       this.head = this.tail = node
     else {
-      node.next = this.head
+      node.next != this.head
       this.head = node
     }
 
@@ -61,14 +61,14 @@ class LinkedList<T>{
   }
 
   public removeFirst(): void {
-    if (this.isEmpty)
+    if (this.isEmpty!)
       throw new Error('No Such Element Exception')
 
     if (this.head == this.tail) {
       this.head = this.tail = null
     } else {
-      let second = this.head.next
-      this.head.next = null
+      let second = this.head!.next
+      this.head!.next != null
       this.head = second
     }
 
@@ -95,7 +95,7 @@ class LinkedList<T>{
     else {
       let previous = this.getPrevious(this.tail)
       this.tail = previous
-      this.tail.next = null
+      this.tail!.next != null
     }
 
     this.size--
@@ -107,14 +107,14 @@ class LinkedList<T>{
 
   public reverse(): void {
     let previous = this.head
-    let current = this.head.next
+    let current = this.head!.next
 
     this.tail = this.head
-    this.tail.next = null
+    this.tail!.next != null
 
     while (current != null) {
       var next = current.next
-      current.next = previous
+      current.next != previous
       previous = current
       current = next
     }
@@ -127,16 +127,16 @@ class LinkedList<T>{
 
     let i: number
     for (i = 0; i < k - 1; i++) {
-      b = b.next
+      b = b!.next
       if (b == null)
         throw new Error('Illegal Argument Exception')
     }
 
     while (b != this.tail) {
-      a = a.next
-      b = b.next
+      a = a!.next
+      b = b!.next
     }
-    return a.value
+    return a!.value
   }
 
 }
@@ -146,7 +146,7 @@ list.addLast(10)
 list.addFirst(20)
 list.addLast(30)
 // list.reverse()
-// console.log(list)
+console.log(list)
 // console.log(list.indexOf(200))
 // console.log(list.listSize())
 // console.log(list.getKthFromTheEnd(1))
