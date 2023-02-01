@@ -1,9 +1,9 @@
 let a8: number[] = [-1, -1, -1, 10, 25, 60, 80]
 let b8: number[] = [5, 20, 70]
-let n6: number = a8.length
-let m6: number = b8.length
+let n8: number = a8.length
+let m8: number = b8.length
 
-merge(a8, b8, n6, m6)
+merge(a8, b8, n8, m8)
 
 function merge(a: number[], b: number[], n: number, m: number) {
     let i = m
@@ -23,5 +23,5 @@ function merge(a: number[], b: number[], n: number, m: number) {
     }
 }
 
-for(let i:number = 0; i<m6+n6; i++)
+for(let i:number = 0; i<m8+n8; i++)
     console.log(a8[i]);

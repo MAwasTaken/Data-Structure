@@ -142,9 +142,11 @@ class LinkedList<T>{
 }
 
 let list = new LinkedList()
-list.addLast(10)
+// list.addLast(10)
 list.addFirst(20)
 list.addLast(30)
+list.addLast(40)
+list.addLast(50)
 // list.reverse()
 console.log(list)
 // console.log(list.indexOf(200))
